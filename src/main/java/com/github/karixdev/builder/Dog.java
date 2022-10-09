@@ -11,4 +11,5 @@ public class Dog {
     private String breed;
     private String color;
     private double weight;
+    private Person owner;
 }
