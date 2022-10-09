@@ -47,8 +47,6 @@ public class Database {
 
     @Override
     public String toString() {
-        return "Records {" +
-                "records=" + records +
-                '}';
+        return records.toString();
     }
 }
