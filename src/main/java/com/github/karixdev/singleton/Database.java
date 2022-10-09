@@ -6,10 +6,10 @@ import java.util.Map;
 public class Database {
     private static Database database;
 
-    private final Map<String, String> content;
+    private final Map<String, String> records;
 
     private Database() {
-        this.content = new HashMap<>();
+        this.records = new HashMap<>();
     }
 
     public static Database getInstance() {
@@ -21,27 +21,34 @@ public class Database {
     }
 
     public void insert(String key, String value) {
-        content.putIfAbsent(key, value);
+        records.putIfAbsent(key, value);
     }
 
     private void checkIfRecordExists(String key) {
-        if (!content.containsKey(key)) {
+        if (!records.containsKey(key)) {
             throw new IllegalArgumentException("There's record with provided key");
         }
     }
 
     public void update(String key, String value) {
         checkIfRecordExists(key);
-        content.put(key, value);
+        records.put(key, value);
     }
 
     public String select(String key) {
         checkIfRecordExists(key);
-        return content.get(key);
+        return records.get(key);
     }
 
     public void delete(String key) {
         checkIfRecordExists(key);
-        content.remove(key);
+        records.remove(key);
+    }
+
+    @Override
+    public String toString() {
+        return "Records {" +
+                "records=" + records +
+                '}';
     }
 }
