@@ -16,5 +16,18 @@ public class Main {
 
         Database database4 = Database.getInstance();
         System.out.println(database4.toString());
+
+        Thread thread1 = new Thread(() -> {
+            MultiThreadedSingleton multiThreadedSingleton = new MultiThreadedSingleton("123");
+            System.out.println(multiThreadedSingleton.getValue());
+        });
+
+        Thread thread2 = new Thread(() -> {
+            MultiThreadedSingleton multiThreadedSingleton = new MultiThreadedSingleton("456");
+            System.out.println(multiThreadedSingleton.getValue());
+        });
+
+        thread1.start();
+        thread2.start();
     }
 }
