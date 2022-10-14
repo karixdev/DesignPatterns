@@ -1,5 +1,8 @@
 package com.github.karixdev.fectorymethod;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 public enum DishType {
     BREAKFAST("breakfast"),
     DINNER("dinner"),
@@ -7,11 +10,8 @@ public enum DishType {
 
     private final String value;
 
-    DishType(String value) {
-        this.value = value;
-    }
-
-    public String getValue() {
+    @Override
+    public String toString() {
         return value;
     }
 }
