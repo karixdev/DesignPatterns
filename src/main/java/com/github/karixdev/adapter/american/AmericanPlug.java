@@ -1,5 +1,5 @@
 package com.github.karixdev.adapter.american;
 
-public interface AmericanOutlet {
+public interface AmericanPlug {
     void connectAmericanPlug();
 }

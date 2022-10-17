@@ -1,6 +1,6 @@
 package com.github.karixdev.adapter.european;
 
-public interface EuropeanOutlet {
+public interface EuropeanPlug {
     void connectEuropeanPlug();
 }
 
