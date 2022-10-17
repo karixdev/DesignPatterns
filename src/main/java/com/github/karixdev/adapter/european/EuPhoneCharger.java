@@ -1,7 +1,8 @@
 package com.github.karixdev.adapter.european;
 
-public class EuPhoneCharger {
-    public void connect(EuropeanPlug europeanOutlet) {
-        europeanOutlet.connectEuropeanPlug();
+public class EuPhoneCharger implements EuropeanPlug {
+    @Override
+    public void connectEuropeanPlug() {
+        System.out.println("Connect with polish plug");
     }
 }
