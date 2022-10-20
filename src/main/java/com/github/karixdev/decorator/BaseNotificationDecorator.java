@@ -9,7 +9,7 @@ public class BaseNotificationDecorator implements Notification {
     }
 
     @Override
-    public void send(String message) {
-        wrappee.send(message);
+    public void send(User user, String message) {
+        wrappee.send(user, message);
     }
 }
