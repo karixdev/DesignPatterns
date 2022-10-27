@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LaundryItem {
     private String name;
-    private LaundryItemStatus status;
+    private LaundryItemStatus status = LaundryItemStatus.UNCLEAN;
 }
