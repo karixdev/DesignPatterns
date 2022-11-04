@@ -1,7 +1,7 @@
 package com.github.karixdev.state;
 
 public abstract class PhoneState {
-    private final Phone phone;
+    protected final Phone phone;
 
     public PhoneState(Phone phone) {
         this.phone = phone;
